@@ -4,18 +4,21 @@
 #
 Name     : R-taxize
 Version  : 0.9.6
-Release  : 10
+Release  : 11
 URL      : https://cran.r-project.org/src/contrib/taxize_0.9.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/taxize_0.9.6.tar.gz
 Summary  : Taxonomic Information from Around the Web
 Group    : Development/Tools
 License  : MIT
-Requires: R-reshape
-Requires: R-stringi
-Requires: R-triebeard
+Requires: R-data.table
+Requires: R-httpcode
+Requires: R-tibble
+Requires: R-vcr
 BuildRequires : R-ape
 BuildRequires : R-bold
 BuildRequires : R-crul
+BuildRequires : R-data.table
+BuildRequires : R-httpcode
 BuildRequires : R-natserv
 BuildRequires : R-reshape
 BuildRequires : R-reshape2
@@ -23,7 +26,9 @@ BuildRequires : R-ritis
 BuildRequires : R-rotl
 BuildRequires : R-rredlist
 BuildRequires : R-stringi
+BuildRequires : R-tibble
 BuildRequires : R-triebeard
+BuildRequires : R-vcr
 BuildRequires : R-vegan
 BuildRequires : R-wikitaxa
 BuildRequires : R-worrms
@@ -48,10 +53,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552846379
+export SOURCE_DATE_EPOCH=1552865896
 
 %install
-export SOURCE_DATE_EPOCH=1552846379
+export SOURCE_DATE_EPOCH=1552865896
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

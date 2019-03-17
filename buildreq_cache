@@ -2,6 +2,8 @@
 R-ape
 R-bold
 R-crul
+R-data.table
+R-httpcode
 R-natserv
 R-reshape
 R-reshape2
@@ -9,7 +11,9 @@ R-ritis
 R-rotl
 R-rredlist
 R-stringi
+R-tibble
 R-triebeard
+R-vcr
 R-vegan
 R-wikitaxa
 R-worrms
