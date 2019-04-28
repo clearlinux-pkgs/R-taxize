@@ -4,17 +4,13 @@
 #
 Name     : R-taxize
 Version  : 0.9.6
-Release  : 15
+Release  : 16
 URL      : https://cran.r-project.org/src/contrib/taxize_0.9.6.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/taxize_0.9.6.tar.gz
 Summary  : Taxonomic Information from Around the Web
 Group    : Development/Tools
 License  : MIT
-Requires: R-base64enc
-Requires: R-foreach
-Requires: R-lazyeval
-Requires: R-plyr
-Requires: R-rlang
+Requires: R-iterators
 BuildRequires : R-ape
 BuildRequires : R-base64enc
 BuildRequires : R-bold
@@ -22,6 +18,7 @@ BuildRequires : R-crul
 BuildRequires : R-data.table
 BuildRequires : R-foreach
 BuildRequires : R-httpcode
+BuildRequires : R-iterators
 BuildRequires : R-lazyeval
 BuildRequires : R-natserv
 BuildRequires : R-plyr
@@ -59,10 +56,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552929712
+export SOURCE_DATE_EPOCH=1556469779
 
 %install
-export SOURCE_DATE_EPOCH=1552929712
+export SOURCE_DATE_EPOCH=1556469779
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -98,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  taxize || :
+R CMD check --no-manual --no-examples --no-codoc taxize || :
 
 
 %files

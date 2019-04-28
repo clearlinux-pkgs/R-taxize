@@ -6,6 +6,7 @@ R-crul
 R-data.table
 R-foreach
 R-httpcode
+R-iterators
 R-lazyeval
 R-natserv
 R-plyr
