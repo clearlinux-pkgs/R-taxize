@@ -1,4 +1,4 @@
-0.9.6
+0.9.7
 R-ape
 R-base64enc
 R-bold
@@ -7,8 +7,10 @@ R-data.table
 R-foreach
 R-httpcode
 R-iterators
+R-jsonlite
 R-lazyeval
 R-natserv
+R-phangorn
 R-plyr
 R-reshape
 R-reshape2
@@ -23,4 +25,5 @@ R-vcr
 R-vegan
 R-wikitaxa
 R-worrms
+R-xml2
 R-zoo
