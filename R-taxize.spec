@@ -4,17 +4,20 @@
 #
 Name     : R-taxize
 Version  : 0.9.8
-Release  : 22
+Release  : 23
 URL      : https://cran.r-project.org/src/contrib/taxize_0.9.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/taxize_0.9.8.tar.gz
 Summary  : Taxonomic Information from Around the Web
 Group    : Development/Tools
 License  : MIT
+Requires: R-R6
+Requires: R-ape
 Requires: R-bold
+Requires: R-cli
+Requires: R-crayon
 Requires: R-crul
 Requires: R-data.table
 Requires: R-foreach
-Requires: R-iterators
 Requires: R-jsonlite
 Requires: R-natserv
 Requires: R-phangorn
@@ -23,25 +26,40 @@ Requires: R-reshape2
 Requires: R-ritis
 Requires: R-rotl
 Requires: R-rredlist
+Requires: R-stringr
 Requires: R-tibble
 Requires: R-wikitaxa
 Requires: R-worrms
 Requires: R-xml2
 Requires: R-zoo
+BuildRequires : R-R6
+BuildRequires : R-ape
+BuildRequires : R-base64enc
 BuildRequires : R-bold
+BuildRequires : R-cli
+BuildRequires : R-crayon
 BuildRequires : R-crul
 BuildRequires : R-data.table
 BuildRequires : R-foreach
+BuildRequires : R-httpcode
 BuildRequires : R-iterators
 BuildRequires : R-jsonlite
+BuildRequires : R-lazyeval
 BuildRequires : R-natserv
 BuildRequires : R-phangorn
 BuildRequires : R-plyr
+BuildRequires : R-reshape
 BuildRequires : R-reshape2
 BuildRequires : R-ritis
+BuildRequires : R-rlang
 BuildRequires : R-rotl
 BuildRequires : R-rredlist
+BuildRequires : R-stringi
+BuildRequires : R-stringr
 BuildRequires : R-tibble
+BuildRequires : R-triebeard
+BuildRequires : R-vcr
+BuildRequires : R-vegan
 BuildRequires : R-wikitaxa
 BuildRequires : R-worrms
 BuildRequires : R-xml2
@@ -65,13 +83,13 @@ taxize
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1561736252
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562448745
 
 %install
-export SOURCE_DATE_EPOCH=1561736252
+export SOURCE_DATE_EPOCH=1562448745
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -100,7 +118,7 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
