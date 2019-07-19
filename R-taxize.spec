@@ -4,7 +4,7 @@
 #
 Name     : R-taxize
 Version  : 0.9.8
-Release  : 23
+Release  : 24
 URL      : https://cran.r-project.org/src/contrib/taxize_0.9.8.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/taxize_0.9.8.tar.gz
 Summary  : Taxonomic Information from Around the Web
@@ -28,37 +28,29 @@ Requires: R-rotl
 Requires: R-rredlist
 Requires: R-stringr
 Requires: R-tibble
+Requires: R-vegan
 Requires: R-wikitaxa
 Requires: R-worrms
 Requires: R-xml2
 Requires: R-zoo
 BuildRequires : R-R6
 BuildRequires : R-ape
-BuildRequires : R-base64enc
 BuildRequires : R-bold
 BuildRequires : R-cli
 BuildRequires : R-crayon
 BuildRequires : R-crul
 BuildRequires : R-data.table
 BuildRequires : R-foreach
-BuildRequires : R-httpcode
-BuildRequires : R-iterators
 BuildRequires : R-jsonlite
-BuildRequires : R-lazyeval
 BuildRequires : R-natserv
 BuildRequires : R-phangorn
 BuildRequires : R-plyr
-BuildRequires : R-reshape
 BuildRequires : R-reshape2
 BuildRequires : R-ritis
-BuildRequires : R-rlang
 BuildRequires : R-rotl
 BuildRequires : R-rredlist
-BuildRequires : R-stringi
 BuildRequires : R-stringr
 BuildRequires : R-tibble
-BuildRequires : R-triebeard
-BuildRequires : R-vcr
 BuildRequires : R-vegan
 BuildRequires : R-wikitaxa
 BuildRequires : R-worrms
@@ -67,14 +59,10 @@ BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
 %description
-taxize
-======
-[![cran checks](https://cranchecks.info/badges/worst/taxize)](https://cranchecks.info/pkgs/taxize)
-[![Build Status](https://travis-ci.org/ropensci/taxize.svg?branch=master)](https://travis-ci.org/ropensci/taxize)
-[![Build status](https://ci.appveyor.com/api/projects/status/6mgc02mkd8j4sq3g/branch/master)](https://ci.appveyor.com/project/sckott/taxize-175/branch/master)
-[![codecov.io](https://codecov.io/github/ropensci/taxize/coverage.svg?branch=master)](https://codecov.io/github/ropensci/taxize?branch=master)
-[![rstudio mirror downloads](http://cranlogs.r-pkg.org/badges/taxize)](https://github.com/metacran/cranlogs.app)
-[![cran version](http://www.r-pkg.org/badges/version/taxize)](https://cran.r-project.org/package=taxize)
+such as getting database specific taxonomic identifiers, verifying
+    species names, getting taxonomic hierarchies, fetching downstream and
+    upstream taxonomic names, getting taxonomic synonyms, converting
+    scientific to common names and vice versa, and more.
 
 %prep
 %setup -q -c -n taxize
@@ -84,10 +72,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562448745
+export SOURCE_DATE_EPOCH=1563574418
 
 %install
-export SOURCE_DATE_EPOCH=1562448745
+export SOURCE_DATE_EPOCH=1563574418
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
