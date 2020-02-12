@@ -4,7 +4,7 @@
 #
 Name     : R-taxize
 Version  : 0.9.92
-Release  : 28
+Release  : 29
 URL      : https://cran.r-project.org/src/contrib/taxize_0.9.92.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/taxize_0.9.92.tar.gz
 Summary  : Taxonomic Information from Around the Web
@@ -25,7 +25,6 @@ Requires: R-ritis
 Requires: R-rotl
 Requires: R-rredlist
 Requires: R-tibble
-Requires: R-vegan
 Requires: R-wikitaxa
 Requires: R-worrms
 Requires: R-xml2
@@ -69,10 +68,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581529110
+export SOURCE_DATE_EPOCH=1581529650
 
 %install
-export SOURCE_DATE_EPOCH=1581529110
+export SOURCE_DATE_EPOCH=1581529650
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
