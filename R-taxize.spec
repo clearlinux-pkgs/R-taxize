@@ -4,7 +4,7 @@
 #
 Name     : R-taxize
 Version  : 0.9.95
-Release  : 33
+Release  : 34
 URL      : https://cran.r-project.org/src/contrib/taxize_0.9.95.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/taxize_0.9.95.tar.gz
 Summary  : Taxonomic Information from Around the Web
@@ -25,7 +25,6 @@ Requires: R-ritis
 Requires: R-rotl
 Requires: R-rredlist
 Requires: R-tibble
-Requires: R-vegan
 Requires: R-wikitaxa
 Requires: R-worrms
 Requires: R-xml2
@@ -45,7 +44,6 @@ BuildRequires : R-ritis
 BuildRequires : R-rotl
 BuildRequires : R-rredlist
 BuildRequires : R-tibble
-BuildRequires : R-vegan
 BuildRequires : R-wikitaxa
 BuildRequires : R-worrms
 BuildRequires : R-xml2
@@ -53,32 +51,29 @@ BuildRequires : R-zoo
 BuildRequires : buildreq-R
 
 %description
-taxize
-======
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-[![cran checks](https://cranchecks.info/badges/worst/taxize)](https://cranchecks.info/pkgs/taxize)
-[![Build Status](https://travis-ci.org/ropensci/taxize.svg?branch=master)](https://travis-ci.org/ropensci/taxize)
-[![Build status](https://ci.appveyor.com/api/projects/status/6mgc02mkd8j4sq3g/branch/master)](https://ci.appveyor.com/project/sckott/taxize-175/branch/master)
-[![rstudio mirror downloads](https://cranlogs.r-pkg.org/badges/taxize)](https://github.com/metacran/cranlogs.app)
-[![cran version](https://www.r-pkg.org/badges/version/taxize)](https://cran.r-project.org/package=taxize)
+such as getting database specific taxonomic identifiers, verifying
+    species names, getting taxonomic hierarchies, fetching downstream and
+    upstream taxonomic names, getting taxonomic synonyms, converting
+    scientific to common names and vice versa, and more.
 
 %prep
 %setup -q -c -n taxize
+cd %{_builddir}/taxize
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1588086630
+export SOURCE_DATE_EPOCH=1589398353
 
 %install
-export SOURCE_DATE_EPOCH=1588086630
+export SOURCE_DATE_EPOCH=1589398353
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
