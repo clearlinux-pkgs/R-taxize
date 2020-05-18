@@ -4,7 +4,7 @@
 #
 Name     : R-taxize
 Version  : 0.9.95
-Release  : 34
+Release  : 35
 URL      : https://cran.r-project.org/src/contrib/taxize_0.9.95.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/taxize_0.9.95.tar.gz
 Summary  : Taxonomic Information from Around the Web
@@ -65,10 +65,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589398353
+export SOURCE_DATE_EPOCH=1589780189
 
 %install
-export SOURCE_DATE_EPOCH=1589398353
+export SOURCE_DATE_EPOCH=1589780189
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
