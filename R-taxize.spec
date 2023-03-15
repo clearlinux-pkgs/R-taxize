@@ -4,7 +4,7 @@
 #
 Name     : R-taxize
 Version  : 0.9.100
-Release  : 57
+Release  : 58
 URL      : https://cran.r-project.org/src/contrib/taxize_0.9.100.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/taxize_0.9.100.tar.gz
 Summary  : Taxonomic Information from Around the Web
